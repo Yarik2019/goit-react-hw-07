@@ -26,7 +26,6 @@ function App() {
       <SearchBox />
       {isLoading && !isError && <Loader />}
       {isError && <ErrorMessages message={isError} />}
-      {/* {isError} */}
       <ContactList contacts={contacts} />
     </div>
   );
