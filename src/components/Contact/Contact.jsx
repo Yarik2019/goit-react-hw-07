@@ -1,9 +1,11 @@
-import s from "./Contact.module.css";
-import { deleteContact } from "../../redux/contactsSlice";
 import { useDispatch } from "react-redux";
+import { deleteContact } from "../../services/api";
+import s from "./Contact.module.css";
+
 const Contact = (props) => {
   const { id, name, number } = props;
   const dispatch = useDispatch();
+
   return (
     <div className={s.container}>
       <div className={s.item}>

@@ -1,10 +1,10 @@
 import s from "./SearchBox.module.css";
 import { useId } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectNameFilter, changeFilter } from "../../redux/filtersSlice";
+import { selectedNameFilter, changeFilter } from "../../redux/filtersSlice";
 const SearchBox = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(selectNameFilter);
+  const filter = useSelector(selectedNameFilter);
   const searchId = useId();
   return (
     <div className={s.wrapperSearch}>

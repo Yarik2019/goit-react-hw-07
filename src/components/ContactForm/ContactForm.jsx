@@ -3,13 +3,14 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
 import { nanoid } from "nanoid";
 import * as Yup from "yup";
-import { addContact } from "../../redux/contactsSlice";
 import { useDispatch } from "react-redux";
+import { addContact } from "../../services/api";
 
 const ContactForm = () => {
   const nameId = useId();
   const phoneId = useId();
   const dispatch = useDispatch();
+  nanoid();
   // const onlyWords = /^[a-zA-Z]+$/;
   const handleSubmit = (values, options) => {
     dispatch(
