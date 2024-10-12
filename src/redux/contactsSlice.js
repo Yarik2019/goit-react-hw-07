@@ -1,5 +1,5 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
-import { addContact, deleteContact, fetchContacts } from "../services/api";
+import { addContact, deleteContact, fetchContacts } from "./contactsOps";
 import { selectContacts } from "./selectors";
 import { selectedNameFilter } from "./filtersSlice";
 
@@ -21,11 +21,6 @@ const handleRejected = (state, action) => {
 const contactSlice = createSlice({
   name: "contacts",
   initialState,
-  // reducers: {
-  //   deleteContact: (state, action) => {
-  //     state.items = state.items.filter((item) => item.id !== action.payload);
-  //   },
-  // },
   extraReducers: (builder) => {
     builder
       .addCase(fetchContacts.pending, handlePending)
